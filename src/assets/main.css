@@ -1,0 +1,33 @@
+:root[data-theme="light"] {
+    transition: all 0.2s ease;
+    --background-color: #fff;
+    --background-theme-color: #28abce;
+    --background-theme-color-hover: #d9f7ff;
+    --text-color: #252525;
+    --text-theme-color: #28abce;
+    --icon-theme-color-blur: #30303086;
+    --icon-theme-color-blur-hover: #7fc1e7;
+    --box-shadow: 5px 2px 12px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --nav-shadow: 5px 2px 6px 1px rgba(0, 0, 0, 0.1);
+    --text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+    transition: all 0.2s ease;
+    --background-color: #252525;
+    --text-color: #fff;
+    --background-theme-color: #28abce;
+    --background-theme-color-hover: #596366;
+    --text-theme-color: #30d2ff;
+    --icon-theme-color-blur: #ffffffcb;
+    --icon-theme-color-blur-hover: #7fc1e7;
+    --box-shadow: 5px 2px 12px 6px rgba(255, 255, 255, 0.1);
+    --box-shadow-color: rgba(255, 255, 255, 0.1);
+    --nav-shadow: 5px 2px 6px 1px rgba(255, 255, 255, 0.1);
+    --text-shadow: 5px 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+#app {
+    transition: all 0.2s ease;
+}

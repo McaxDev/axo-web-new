@@ -1,0 +1,100 @@
+<template>  
+    <div>
+        <div class="navroute-box">
+            <div class="navroute-item" @click="linkto('/')">
+                首页
+            </div>
+            <div class="navroute-box ms-3">
+                <el-dropdown>
+                    <div class="navroute-box" @click="linkto('/wiki')">
+                        <div>
+                            知识库
+                        </div>
+                        <el-icon class="el-icon--right">
+                            <arrow-down />
+                        </el-icon>
+                    </div>
+                    <template #dropdown>
+                        <el-dropdown-menu>
+                            <el-dropdown-item v-for="(item,index) in wikiMenu.menuList" :key="index" @click="linkto(`/wiki/${item.path}`)">
+                                {{item.name}}
+                            </el-dropdown-item>
+                        </el-dropdown-menu>
+                    </template>
+                </el-dropdown>
+            </div>
+            <div class="navroute-item ms-3" @click="linkto('/gallery')">
+                画廊
+            </div>
+            <div class="navroute-box ms-3">
+                <el-dropdown>
+                    <div class="navroute-box">
+                        <div>
+                            更多
+                        </div>
+                        <el-icon class="el-icon--right">
+                            <arrow-down />
+                        </el-icon>
+                    </div>
+                    <template #dropdown>
+                        <el-dropdown-menu>
+                            <el-dropdown-item v-for="(item,index) in otherRoute" :key="index">
+                                {{item.name}}
+                            </el-dropdown-item>
+                        </el-dropdown-menu>
+                    </template>
+                </el-dropdown>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    // import '../assets/elementStyle.css'
+    import { http, httpStatic } from '@/utils/http'
+    import { wikiMenuStore } from '../stores/stores'
+    export default{
+        name:"",
+        components:{},
+        data(){
+            return{
+                wikiMenu:wikiMenuStore(),
+                otherRoute:[
+                    {
+                        path:'/panel',
+                        name:'控制台'
+                    }
+                ]
+            }
+        },
+        mounted(){
+            httpStatic.get('/wiki/metadata.json')
+                .then(res=>{
+                    this.wikiMenu.menuList=res.data
+                    console.log(this.wikiMenu.menuList)
+                })
+        },
+        methods:{
+            linkto(page){
+                this.$router.push(page)
+            }
+        }
+    }
+</script>
+
+<style scoped>
+.navroute-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.navroute-item{
+    transition: 0.2s ease;
+    &:hover{
+        cursor: pointer;
+        color:var(--text-theme-color);
+    }
+}
+</style>
