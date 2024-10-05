@@ -6,7 +6,7 @@
             </div>
             <div class="navroute-box ms-3">
                 <el-dropdown>
-                    <div class="navroute-box" @click="linkto('/wiki')">
+                    <div class="navroute-box" @click="linkto(`/wiki/${wikiMenu.menuList[0].path}`)">
                         <div>
                             知识库
                         </div>
@@ -23,7 +23,7 @@
                     </template>
                 </el-dropdown>
             </div>
-            <div class="navroute-item ms-3" @click="linkto('/gallery')">
+            <div class="navroute-item ms-3" @click="linkto('/gallery/index')">
                 画廊
             </div>
             <div class="navroute-box ms-3">

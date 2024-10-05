@@ -1,6 +1,6 @@
 <template>
     <Navbar style="width: 100%;z-index: 99;"/>
-    <router-view style="margin-top: 56px;"></router-view>
+    <router-view style="margin-top: 72px;"></router-view>
     <!-- <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition> -->
@@ -8,8 +8,6 @@
 
 <script>
   import Navbar from './components/navbar.vue'
-  // import './assets/main.css'
-  // import './assets/elementStyle.css'
   export default{
     components:{Navbar},
     data(){
@@ -35,6 +33,10 @@
 }
 #app{
   font-family: 'pingfang';
+  background-color: var(--background-color);
+  min-height: calc(100vh - 72px);
+}
+body{
   background-color: var(--background-color);
 }
 .fade-enter-active, .fade-leave-active {

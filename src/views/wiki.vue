@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="wiki-content">
-            <div v-html="renderedMarkdown"></div>
+            <div class="markdown-body" v-html="renderedMarkdown"></div>
         </div>
     </div>
 </template>
@@ -18,7 +18,7 @@
     import { wikiMenuStore } from '../stores/stores'
     import MarkdownIt from 'markdown-it'
 
-    import 'github-markdown-css'
+    import '../assets/markdown.css'
     export default{
         // components:{Navbar},
         props: ['path'],
@@ -57,6 +57,7 @@
 .wiki-box{
     display: flex;
     padding: 20px;
+    padding-top: 0;
     position: relative;
 }
 .wiki-menu{
@@ -82,7 +83,7 @@
 }
 .wiki-menu-inside{
     position: sticky;
-    top: 74px;
+    top: 106px;
 }
 .wiki-content{
     margin: 5px;

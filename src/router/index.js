@@ -9,7 +9,7 @@ const router = createRouter({
       component: () => import('../views/index.vue')
     },
     {
-      path: '/gallery',
+      path: '/gallery/:path',
       name: 'gallery',
       component: () => import('../views/gallery.vue')
     },

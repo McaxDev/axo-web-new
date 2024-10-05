@@ -1,5 +1,3 @@
-import './assets/main.css'
-import './assets/elementStyle.css'
 
 import { pinia } from './utils/http'
 
@@ -19,6 +17,10 @@ import ElementPlus from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
+// 自定义样式一定要在最后加载
+import './assets/main.css'
+
+import './assets/elementStyle.css'
 
 app.use(AllIcon)
 

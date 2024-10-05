@@ -11,6 +11,16 @@
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --nav-shadow: 5px 2px 6px 1px rgba(0, 0, 0, 0.1);
     --text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.1);
+
+    /* markdown */
+    --md-background-color: #fff;
+    --md-text-color: #252525;
+    --md-link-color: #28abce;
+    --md-link-hover-color: #2291af;
+    --md-border-color: #ccc;
+    --md-code-background: #f6f8fa;
+    --md-quote-border-color: #28abce;
+    --md-header-color: #303030;
 }
 
 :root[data-theme="dark"] {
@@ -26,6 +36,16 @@
     --box-shadow-color: rgba(255, 255, 255, 0.1);
     --nav-shadow: 5px 2px 6px 1px rgba(255, 255, 255, 0.1);
     --text-shadow: 5px 2px 6px rgba(255, 255, 255, 0.1);
+
+    /* markdown */
+    --md-background-color: #252525;
+    --md-text-color: #e6e6e6;
+    --md-link-color: #30d2ff;
+    --md-link-hover-color: #2d90ac;
+    --md-border-color: #444;
+    --md-code-background: #2b2b2b;
+    --md-quote-border-color: #7fc1e7;
+    --md-header-color: #ffffffcb;
 }
 
 #app {
