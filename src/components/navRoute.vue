@@ -91,9 +91,9 @@
 }
 
 .navroute-item{
-    transition: 0.2s ease;
     &:hover{
         cursor: pointer;
+        transition: 0.2s ease;
         color:var(--text-theme-color);
     }
 }

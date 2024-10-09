@@ -52,3 +52,10 @@
 .el-scrollbar{
     background: none;
 }
+
+.el-carousel__button{
+    background: var(--text-color);
+}
+.el-carousel__container{
+    height: 100%;
+}

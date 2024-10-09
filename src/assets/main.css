@@ -5,6 +5,8 @@
     --background-theme-color-hover: #d9f7ff;
     --text-color: #252525;
     --text-theme-color: #28abce;
+    --footer-text-color:#a1aab8;
+    --footer-bg:#f8f8fc;
     --icon-theme-color-blur: #30303086;
     --icon-theme-color-blur-hover: #7fc1e7;
     --box-shadow: 5px 2px 12px 6px rgba(0, 0, 0, 0.1);
@@ -26,10 +28,12 @@
 :root[data-theme="dark"] {
     transition: all 0.2s ease;
     --background-color: #252525;
-    --text-color: #fff;
+    --text-color: #e6e6e6;
     --background-theme-color: #28abce;
     --background-theme-color-hover: #596366;
     --text-theme-color: #30d2ff;
+    --footer-text-color:#8b94a1;
+    --footer-bg:#2c2c2c;
     --icon-theme-color-blur: #ffffffcb;
     --icon-theme-color-blur-hover: #7fc1e7;
     --box-shadow: 5px 2px 12px 6px rgba(255, 255, 255, 0.1);

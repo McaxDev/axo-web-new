@@ -62,8 +62,8 @@
 }
 .wiki-menu{
     min-width: 260px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     border-radius: 8px;
     padding: 2px;
     margin-top: 30px;
