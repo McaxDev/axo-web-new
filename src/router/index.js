@@ -19,6 +19,12 @@ const router = createRouter({
       component: () => import('../views/wiki.vue'),
       props: true
     },
+    {
+      path: '/edition',
+      name: 'edition',
+      component: () => import('../views/edition.vue'),
+      props: true
+    },
   ]
 })
 
