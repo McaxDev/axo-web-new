@@ -60,13 +60,13 @@ body::-webkit-scrollbar-track {
 
 /* 滚动条手柄 */
 body::-webkit-scrollbar-thumb {
-  background: var(--icon-theme-color-blur);
+  background: var(--icon-theme-color-blur); 
   border-radius: 4px;
 }
 
 /* 滚动条手柄悬停效果 */
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--text-color);
+  background: var(--icon-theme-color-blur);
 }
 html{
   scroll-behavior: smooth;

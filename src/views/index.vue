@@ -10,13 +10,15 @@
                 </div>
             </el-carousel-item>
         </el-carousel>
+        <InedxIntroduction></InedxIntroduction>
     </div>
 </template>
 
 <script>
     import { http, httpStatic } from '@/utils/http'
+    import InedxIntroduction from '@/components/inedxIntroduction.vue'
     export default{
-        components:{},
+        components:{InedxIntroduction},
         data(){
             return{
                 carouselList:[]
