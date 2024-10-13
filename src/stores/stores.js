@@ -49,7 +49,7 @@ export const wikiMenuStore = defineStore('wikiMenu', {
 
 export const appInfoStore = defineStore('appInfo', {
   state: () => ({
-    version: 'v0.0.1 Preview',
+    version: 'v1.0.0 Preview',
     log:'',
   }),
 })

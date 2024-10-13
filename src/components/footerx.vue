@@ -1,8 +1,11 @@
 <template>
     <div class="footer-box">
         <div>
-            <div class="logo">Axolotland-Logo</div>
-            <div class="copyright">Axolotland | Copyright @ 2024</div>
+            <div class="logo">
+                <Logo color="var(--footer-text-color)" w="30px" h="25px"></Logo>
+                <div style="font-weight: bold;margin-left: 2px;letter-spacing: 1px;">Axolotland</div>
+            </div>
+            <div class="copyright">Axolotland Gaming Club | Copyright @ 2024</div>
             <div class="beian">
                 <a href="#" style="text-decoration: none;">{{ icp }}</a>
             </div>
@@ -15,9 +18,10 @@
 
 <script>
     import { appInfoStore } from '../stores/stores'
+    import Logo from './logo.vue'
     export default{
         name:"footer",
-        components:{},
+        components:{Logo},
         data(){
             return{
                 icp:'豫ICP备2023025148号',
@@ -47,5 +51,9 @@
         text-decoration: none;
         color:var(--footer-text-color);
     }
+}
+.logo{
+    display: flex;
+    align-items: center;
 }
 </style>

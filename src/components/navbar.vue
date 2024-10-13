@@ -3,7 +3,7 @@
         <div class="nav-box">
             <div class="nav-box-left">
                 <div>
-                    LOGO
+                    <Logo color="var(--text-color)" w="40px" h="35px"></Logo>
                 </div>
                 <NavRouter/>
             </div>
@@ -20,9 +20,10 @@
 <script>
     import Theme from './theme.vue'
     import NavRouter from './navRoute.vue'
+    import Logo from './logo.vue'
     export default{
         name:"navbar",
-        components:{Theme,NavRouter},
+        components:{Theme,NavRouter,Logo},
         data(){
             return{
 
