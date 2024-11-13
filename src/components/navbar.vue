@@ -8,10 +8,30 @@
                 <NavRouter/>
             </div>
             <div class="nav-box-right">
-                <div>links</div>
-                <div>lang</div>
+                <div>{{ $t('components.navbar.links') }}</div>
+                <div>{{ $t('components.navbar.lang') }}</div>
                 <Theme/>
-                <div>about</div>
+                <div>{{ $t('components.navbar.about') }}</div>
+                <div style="display: flex;align-items: center;">
+                    <el-dropdown placement="bottom">
+                        <el-avatar :icon="UserFilled" />
+                        <template #dropdown>
+                            
+                            <el-dropdown-menu v-if="userInfo.isLogin">
+                                <li class="username_el-dropdown-menu__item">username</li>
+                                <hr class="m-0 mb-1" style="border-top: 1px var(--footer-text-color) solid;">
+                                <el-dropdown-item>The Action 1st</el-dropdown-item>
+                                <el-dropdown-item>The Action 2st</el-dropdown-item>
+                                <el-dropdown-item>The Action 3st</el-dropdown-item>
+                            </el-dropdown-menu>
+
+                            <el-dropdown-menu v-else>
+                                <el-dropdown-item @click="linkto(`/login`)">{{ $t('components.navbar.login') }}</el-dropdown-item>
+                            </el-dropdown-menu>
+
+                        </template>
+                    </el-dropdown>
+                </div>
             </div>
         </div>
     </div>
@@ -21,12 +41,13 @@
     import Theme from './theme.vue'
     import NavRouter from './navRoute.vue'
     import Logo from './logo.vue'
+    import { userStore } from '@/stores/stores'
     export default{
         name:"navbar",
         components:{Theme,NavRouter,Logo},
         data(){
             return{
-
+                userInfo:userStore(),
             }
         },
         created() {
@@ -43,6 +64,9 @@
                     localStorage.setItem('theme', theme)
                     document.documentElement.setAttribute('data-theme', theme)
                 }
+            },
+            linkto(page){
+                this.$router.push(page)
             }
         }
     }
@@ -77,5 +101,11 @@
     &>div{
         padding: 0px 10px;
     }
+}
+
+.username_el-dropdown-menu__item{
+    display: flex;
+    padding: 5px 16px;
+    line-height: 22px;
 }
 </style>

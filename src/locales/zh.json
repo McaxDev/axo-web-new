@@ -1,0 +1,22 @@
+{
+    "components":{
+        "footerx":{
+
+        },
+        "inedxIntroduction":{
+
+        },
+        "navbar":{
+            "links":"链接",
+            "lang":"语言",
+            "about":"关于",
+            "login":"登录/注册"
+        },
+        "navRoute":{
+            "index":"首页",
+            "wiki":"知识库",
+            "gallery":"画廊",
+            "more":"更多"
+        }
+    }
+}

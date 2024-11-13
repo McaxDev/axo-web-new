@@ -13,6 +13,7 @@
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --nav-shadow: 5px 2px 6px 1px rgba(0, 0, 0, 0.1);
     --text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.1);
+    --scrollbar-thumb:#C1C1C1;
 
     /* markdown */
     --md-background-color: #fff;
@@ -40,6 +41,7 @@
     --box-shadow-color: rgba(255, 255, 255, 0.1);
     --nav-shadow: 5px 2px 6px 1px rgba(255, 255, 255, 0.1);
     --text-shadow: 5px 2px 6px rgba(255, 255, 255, 0.1);
+    --scrollbar-thumb:#878787;
 
     /* markdown */
     --md-background-color: #252525;

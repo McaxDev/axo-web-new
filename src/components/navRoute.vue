@@ -2,13 +2,13 @@
     <div>
         <div class="navroute-box">
             <div class="navroute-item" @click="linkto('/')">
-                首页
+                {{ $t('components.navRoute.index') }}
             </div>
             <div class="navroute-box ms-3">
                 <el-dropdown>
                     <div class="navroute-box" @click="linkto(`/wiki/${wikiMenu.menuList[0].path}`)">
                         <div>
-                            知识库
+                            {{ $t('components.navRoute.wiki') }}
                         </div>
                         <el-icon class="el-icon--right">
                             <arrow-down />
@@ -24,13 +24,13 @@
                 </el-dropdown>
             </div>
             <div class="navroute-item ms-3" @click="linkto('/gallery/index')">
-                画廊
+                {{ $t('components.navRoute.gallery') }}
             </div>
             <div class="navroute-box ms-3">
                 <el-dropdown>
                     <div class="navroute-box">
                         <div>
-                            更多
+                            {{ $t('components.navRoute.more') }}
                         </div>
                         <el-icon class="el-icon--right">
                             <arrow-down />
@@ -88,6 +88,7 @@
     flex-direction: row;
     align-items: center;
     transition: 0.2s ease;
+    outline: none;
 }
 
 .navroute-item{

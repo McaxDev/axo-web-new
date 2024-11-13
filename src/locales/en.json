@@ -1,0 +1,15 @@
+{
+    "components":{
+        "footerx":{
+
+        },
+        "inedxIntroduction":{
+
+        },
+        "navbar":{
+            "links":"链接",
+            "lang":"语言",
+            "about":"关于"
+        }
+    }
+}
